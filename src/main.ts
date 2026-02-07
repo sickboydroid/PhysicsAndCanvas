@@ -1,5 +1,3 @@
-import "../assets/balls-and-collisions.png";
-
 interface Project {
   name: string;
   dirName: string;
@@ -15,7 +13,7 @@ const projects: Project[] = [
     name: "Balls and Collisions",
     dirName: "balls-and-collisions",
     description: "A collision detecting and resolver",
-    image: "../assets/balls-and-collisions.png",
+    image: "../public/balls-and-collisions.png",
   },
 ];
 
@@ -33,7 +31,8 @@ function renderProjects(data: Project[]) {
 function createProjectCard(project: Project): HTMLElement {
   const cardLink = document.createElement("a");
   cardLink.className = "card";
-  cardLink.href = `../projects/${project.dirName}/index.html`;
+  // FIXME: Hack for vite's hashing of files, vite places scripts in root of dist
+  cardLink.href = `projects/${project.dirName}/index.html`;
 
   // Use a fallback gradient if no image is provided
   const imageHTML = project.image
