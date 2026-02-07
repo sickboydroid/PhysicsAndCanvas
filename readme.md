@@ -1,6 +1,6 @@
 # Physics and Canvas
 
-View [Physics and Canvas](http://mockemon.me/PhysicsAndCanvas/)
+View [Physics and Canvas](https://sickboydroid.github.io/PhysicsAndCanvas)
 
 This repo hosts a collection of browser-based physics simulations that I swear work on my machine. It’s mostly TypeScript, HTML Canvas, and a lot of `Math.random()`.
 
