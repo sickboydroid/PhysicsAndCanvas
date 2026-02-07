@@ -1,3 +1,5 @@
+import "../assets/balls-and-collisions.png";
+
 interface Project {
   name: string;
   dirName: string;
@@ -31,7 +33,7 @@ function renderProjects(data: Project[]) {
 function createProjectCard(project: Project): HTMLElement {
   const cardLink = document.createElement("a");
   cardLink.className = "card";
-  cardLink.href = `/projects/${project.dirName}/index.html`;
+  cardLink.href = `../projects/${project.dirName}/index.html`;
 
   // Use a fallback gradient if no image is provided
   const imageHTML = project.image
